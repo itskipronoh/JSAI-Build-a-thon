@@ -1,0 +1,244 @@
+body {
+    background: #f3f3ed;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.17rem;
+    color: #222;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 32px auto;
+    background: #fffefa;
+    border: 3px solid #bbb;
+    border-radius: 15px;
+    padding: 30px 24px;
+    box-shadow: 3px 5px 12px #bbb7;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.6em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0 0 12px 0;
+    text-shadow: 2px 2px 0 #e0e0e0;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    margin-bottom: 0.05em;
+    border-bottom: 1.5px dashed #aab;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+section {
+    margin-bottom: 2.4em;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 8px;
+}
+
+.item {
+    flex: 1 1 165px;
+    max-width: 180px;
+    min-width: 120px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.item-title {
+    margin: 0.3em 0 0.1em 0;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #376d3b;
+}
+
+.sketch {
+    display: inline-block;
+    width: 72px;
+    height: 54px;
+    background: #faf9f6;
+    border: 2.5px solid #aaa;
+    border-radius: 7px;
+    margin-bottom: 8px;
+    position: relative;
+}
+ /* Simple CSS vector "sketches" for items (replace with SVG or real images for more detail) */
+
+/* Tent illustrations */
+.sketch.tent1::before {
+    content: "";
+    position: absolute;
+    left: 12px; top: 25px;
+    width: 48px; height: 18px;
+    border-left: 14px solid transparent; 
+    border-right: 14px solid transparent;
+    border-bottom: 25px solid #aaa;
+    border-radius: 7px;
+}
+
+.sketch.tent2::before {
+    content: "";
+    position: absolute;
+    left: 15px; top: 22px;
+    width: 42px; height: 16px;
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;
+    border-bottom: 24px solid #aaa;
+    border-radius: 5px;
+}
+.sketch.tent2::after {
+    content: "";
+    position: absolute;
+    left: 26px; top: 34px;
+    width: 20px; height: 8px;
+    border-bottom: 14px solid #fffefa;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.sketch.tent3::before {
+    content: "";
+    position: absolute;
+    left: 10px; top: 24px;
+    width: 50px; height: 16px;
+    border-radius: 8px;
+    border: 2px solid #aaa;
+    border-bottom: none;
+}
+
+/* Backpack illustrations */
+.sketch.backpack1::before {
+    content: "";
+    position: absolute;
+    width: 26px; height: 36px;
+    left: 23px; top: 12px;
+    border: 2px solid #aaa;
+    border-radius: 12px 12px 20px 20px / 20px 20px 18px 18px;
+}
+.sketch.backpack1::after {
+    content: "";
+    position: absolute;
+    width: 24px; height: 8px;
+    left: 24px; top: 30px;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    border-top: none;
+}
+
+.sketch.backpack2::before {
+    content: "";
+    position: absolute;
+    left: 28px; top: 16px;
+    width: 14px; height: 30px;
+    border: 2px solid #aaa;
+    border-radius: 9px 9px 10px 10px / 12px 12px 18px 18px;
+}
+.sketch.backpack2::after {
+    content: "";
+    position: absolute;
+    left: 24px; top: 40px;
+    width: 24px; height: 10px;
+    border-top: 2px solid #aaa;
+    border-radius: 7px;
+}
+
+.sketch.backpack3::before {
+    content: "";
+    position: absolute;
+    left: 30px; top: 14px;
+    width: 12px; height: 33px;
+    border: 2px solid #aaa;
+    border-radius: 9px 9px 10px 10px / 12px 12px 18px 18px;
+}
+.sketch.backpack3::after {
+    content: "";
+    position: absolute;
+    left: 37px; top: 30px;
+    width: 10px; height: 12px;
+    border: 2px solid #aaa;
+    border-radius: 6px;
+}
+
+/* Hiking clothing sketches */
+.sketch.jacket::before {
+    content: "";
+    position: absolute;
+    left: 24px; top: 16px;
+    width: 24px; height: 24px;
+    border: 2px solid #aaa;
+    border-radius: 7px 7px 18px 18px / 11px 11px 18px 18px;
+}
+.sketch.jacket::after {
+    content: "";
+    position: absolute;
+    left: 12px; top: 10px;
+    width: 48px; height: 30px;
+    border-radius: 16px 16px 24px 24px / 22px 22px 15px 15px;
+    border: 2px solid #aaa;
+    border-top: none;
+    border-bottom: none;
+}
+
+.sketch.pants::before {
+    content: "";
+    position: absolute;
+    left: 30px; top: 12px;
+    width: 10px; height: 32px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+.sketch.pants::after {
+    content: "";
+    position: absolute;
+    left: 18px; top: 12px;
+    width: 10px; height: 32px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+.sketch.pants {
+    border-bottom: 0;
+}
+
+.sketch.boots::before {
+    content: "";
+    position: absolute;
+    left: 16px; top: 35px;
+    width: 18px; height: 12px;
+    border: 2px solid #aaa;
+    border-radius: 5px 7px 10px 10px;
+    background: #f3ede0;
+}
+.sketch.boots::after {
+    content: "";
+    position: absolute;
+    left: 40px; top: 38px;
+    width: 15px; height: 11px;
+    border: 2px solid #aaa;
+    border-radius: 6px 6px 10px 10px;
+    background: #f3ede0;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .items {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .container {
+        padding: 8vw 2vw;
+    }
+}
