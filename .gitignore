@@ -11,6 +11,16 @@
 *.sln.docstates
 
 
+# gitignore.io template: https://www.gitignore.io/api/visualstudio,visualstudio2019,visualstudio2022,visualstudio2017,visualstudio2015,visualstudio2013,visualstudio2012,visualstudio2010,visualstudio2008,visualstudio2005
+.vs/
+.node_modules
+# User-specific files (Visual Studio Code)
+.vscode/
+# User-specific files (Visual Studio Code - OmniSharp)
+.omnisharp/ 
+.node_modules
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -412,3 +422,4 @@ FodyWeavers.xsd
 
 # Environment variables
 .env
+.azure
