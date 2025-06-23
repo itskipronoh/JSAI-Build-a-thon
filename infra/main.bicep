@@ -1,3 +1,29 @@
+
+param webapiName string = 'web_api' 
+param appServicePlanName string = 'appserviceplan'
+
+module serverfarm 'br/public:avm/res/web/serverfarm:0.4.1' = {
+  name: 'appserviceplan'
+  scope: resourceGroup
+  params: {
+    name: appServicePlanName
+    skuName: 'B1'
+  }
+}
+
+module webapi 'br/public:avm/res/web/site:0.15.1' = {
+  name: 'webapi'
+  scope: resourceGroup
+  params: {
+    kind: 'app'
+    name: webapiName
+    tags: union(tags, { 'azd-service-name': webapiName })
+    serverFarmResourceId: serverfarm.outputs.resourceId
+  }
+}
+
+
+
 targetScope = 'subscription'
 
 @minLength(1)
@@ -54,3 +80,4 @@ module webapp 'br/public:avm/res/web/static-site:0.7.0' = {
 
 output WEBAPP_URL string = webapp.outputs.defaultHostname
 
+output WEBAPI_URL string = webapi.outputs.defaultHostname
